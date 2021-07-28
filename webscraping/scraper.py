@@ -7,7 +7,6 @@ html_text = requests.get('https://store.steampowered.com/specials/#p=0&tab=TopSe
 soup = BeautifulSoup(html_text, 'lxml')
 
 list = soup.find('div', id = 'TopSellersRows')
-#discountPercentage = listElements.find_all('div', class_ = 'col search_discount responsive_secondrow')
 listElements = list.find_all('a')
 
 print('Steam Top Sellers Discounts for: ' + str(date.today()))
